@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<div id="myDiv" style="width:640px; height:1235px;z-index: 1000; position: absolute; left: 0px; top: 0px; overflow: scroll;-webkit-transform-origin: 0% 0% 0px;">
+    <iframe id="myFrame" src="http://mole.51.com/" width="640" height="1235"></iframe>
+    <script>
+        setTimeout(function() {
+            myDiv.style.transform = "scale(" + window.innerWidth / 640 + ")";
+            myDiv.style.webkitTransform = "scale(" + window.innerWidth / 640 + ")";
+            myDiv.style.height = window.innerHeight * 640 / window.innerWidth + "px";
+
+        }, 50);
+
+    </script>
+</div>
+
+</body>
+</html>
